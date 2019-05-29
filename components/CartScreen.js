@@ -36,16 +36,17 @@ export default class CartScreen extends React.Component {
     renderListElement = (elem) => {
         const { item } = elem;
         if (!item) return;
-        const {name, quantity, image, price, number} = item;
+        const {name, quantity, picture, price, number} = item;
         return (
             <View key={price}>
                 <View style={styles.itemCart}>
                     <View style={styles.borderBottomItem}>
                         <Text style={styles.itemNumber}>{number} x</Text>
-                        <Image
+                        {/* <Image
                             source={image}
                             style={styles.imageSize}
-                        />
+                        /> */}
+                        {picture}
                         <View style={{marginLeft: 20, marginRight: 5}}>
                             <Text style={{ color: 'white', fontSize: 20 }}>{name}</Text>
                             <Text style={{ color: 'white', fontSize: 8 }}>{quantity}</Text>
